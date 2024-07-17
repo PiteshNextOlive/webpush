@@ -14,6 +14,15 @@ export class PushComponent {
   }
 
   ngOnInit(){
+
+    Notification.requestPermission().then(permission => {
+      if (permission === 'granted') {
+        alert('Notification permission OK.');
+      } else {
+        alert('Notification permission denied.');
+      }
+    });
+
     const ctx=this
     setTimeout(function () {
       ctx.ns.sendNotification("Ok","test")
