@@ -10,4 +10,17 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'webPush';
+
+  public sendNotification(title: string, body: string) {
+    if ('serviceWorker' in navigator && 'PushManager' in window) {
+      navigator.serviceWorker.ready.then(function(registration) {
+        registration.showNotification(title, {
+          body: body,
+          icon: 'public/favicon.ico'
+        });
+      });
+    } else {
+      alert("no")
+    }
+  }
 }
