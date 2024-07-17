@@ -23,7 +23,13 @@ export class NotifService {
         });
       });
     }else {
-      alert("9sud9fsd")
+      if (!('serviceWorker' in navigator)) {
+        console.warn('Service Worker is not supported in this browser.');
+      }
+
+      if (!('PushManager' in window)) {
+        console.warn('Push Notifications are not supported in this browser.');
+      }
     }
   }
 }

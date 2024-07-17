@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "serve": "http-server .\\dist\\web-push\\browser\\ --ssl --cert localhost.pem --key localhost-key.pem"
   },
   "private": true,
   "dependencies": {
