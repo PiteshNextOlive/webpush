@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {SwPush} from "@angular/service-worker";
+import {NotifService} from "../../services/NotifService/notif.service";
 
 @Component({
   selector: 'app-push',
@@ -9,19 +10,13 @@ import {SwPush} from "@angular/service-worker";
   styleUrl: './push.component.css'
 })
 export class PushComponent {
-  constructor(private swPush: SwPush,) {
+  constructor(private swPush: SwPush,protected ns:NotifService) {
   }
 
   ngOnInit(){
     const ctx=this
     setTimeout(function () {
-      ctx.swPush.requestSubscription({
-        serverPublicKey: "BLk3yO7fm5dsrd0HCtbrz40sKuZqWOcY-2jWHOoCBeZg3oCbQcN3ul3iBoHCKlgnddyjD0ywHxj9q_LXCSlGDFw"
-      })
-        .then(sub => {
-          alert("ok")
-        })
-        .catch(err => alert("Could not subscribe to notifications : "+ err));
+      ctx.ns.sendNotification("Ok","test")
     },2000)
   }
 }

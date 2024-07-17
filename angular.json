@@ -24,6 +24,10 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },{
+                "glob": "custom-service-worker.js",
+                "input": "src/",
+                "output": "/"
               }
             ],
             "styles": [
