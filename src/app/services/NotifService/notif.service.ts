@@ -10,8 +10,8 @@ export class NotifService {
     if ('serviceWorker' in navigator && 'PushManager' in window) {
       navigator.serviceWorker.ready.then(function(registration) {
 
-        registration.showNotification(title, {
-          body: body,
+        registration.showNotification("Test notificatiojm", {
+          body: "Content gioews here",
           icon: 'assets/icons/icon-512x512.png',
           // @ts-ignore
           vibrate: [100, 50, 100],

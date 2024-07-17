@@ -16,7 +16,7 @@ export class PushComponent {
   ngOnInit(){
     const ctx=this
     setTimeout(function () {
-      ctx.ns.sendNotification("Ok","test")
+      // ctx.ns.sendNotification("Ok","test")
     },2000)
   }
 }
