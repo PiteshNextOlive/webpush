@@ -11,10 +11,6 @@ import {RouterLink, RouterOutlet} from '@angular/router';
 export class AppComponent {
   title = 'webPush';
 
-  constructor() {
-
-  }
-
   public sendNotification(title: string, body: string) {
     if ('serviceWorker' in navigator && 'PushManager' in window) {
       navigator.serviceWorker.ready.then(function(registration) {

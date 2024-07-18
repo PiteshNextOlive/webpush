@@ -4,5 +4,7 @@ import {PushComponent} from "./components/push/push.component";
 export const routes: Routes = [
   {
     path:"push",component:PushComponent
-  }
+  },
+
+
 ];
