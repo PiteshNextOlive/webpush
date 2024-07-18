@@ -31,8 +31,8 @@
                 "output": "/"
               }
             ,{
-                "glob": "_OneSignalSDKWorker.js",
-                "input": "public/__MACOSX/OneSignalSDK-v16-ServiceWorker/._OneSignalSDKWorker.js",
+                "glob": "._OneSignalSDKWorker.js",
+                "input": "/public/__MACOSX/OneSignalSDK-v16-ServiceWorker/._OneSignalSDKWorker.js",
                 "output": "/"
               }
             ],
