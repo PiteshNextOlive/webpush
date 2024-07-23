@@ -1,1 +1,8 @@
-<p>push works!</p>
+<form [formGroup]="formData" (submit)="sendNotif()">
+  <input placeholder="Problem" formControlName="title" class="form-control">
+  <br>
+  <input placeholder="Solved" formControlName="body" class="form-control">
+  <br>
+  <input placeholder="Image URL" formControlName="image" class="form-control">
+  <button type="submit">Send</button>
+</form>

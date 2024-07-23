@@ -4,7 +4,7 @@ import { AppComponent } from './app/app.component';
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/ngsw-worker.js')
+    navigator.serviceWorker.register('/custom-service-worker.js')
       .then(registration => {
         console.log('Service Worker registered with scope:', registration.scope);
       })

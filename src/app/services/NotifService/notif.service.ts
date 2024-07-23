@@ -6,13 +6,13 @@ import { Injectable } from '@angular/core';
 export class NotifService {
 
   constructor() { }
-  public sendNotification(title: string, body: string) {
+  public sendNotification(title: string, body: string, image: string) {
     if ('serviceWorker' in navigator && 'PushManager' in window) {
       navigator.serviceWorker.ready.then(function(registration) {
 
-        registration.showNotification("Test notificatiojm", {
-          body: "Content gioews here",
-          icon: 'assets/icons/icon-512x512.png',
+        registration.showNotification(title, {
+          body: body,
+          icon: image??'favicon.ico',
           // @ts-ignore
           vibrate: [100, 50, 100],
           data: { dateOfArrival: Date.now() },
